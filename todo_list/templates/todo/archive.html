@@ -1,0 +1,30 @@
+{% extends 'todo/base.html' %}
+{% load static %}
+
+{% block title %}Archive{% endblock %}
+
+{% block content %}
+
+ <div id="wrap">
+    <div id="left" class="panel">
+        <header data-day="1">
+            <p> </p>
+
+            <p class="filter" data-day="1">Сегодня <span></span></p>
+            <p class="filter" data-day="7">7 дней <span></span></p>
+            <p class="filter active" data-day="0">Все <span></span></p>
+
+        </header>
+        <p>Проекты:</p>
+        <div></div>
+
+    </div>
+
+    <div id="centr">
+        <div></div>
+
+    </div>
+
+</div>
+
+{% endblock %}

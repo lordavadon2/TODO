@@ -1,0 +1,31 @@
+{% load static %}
+
+    {% if flag %}
+    <span>У Вас есть просроченные задания! Очень надеемся, что вы просто забыли их отметить </span>
+    {% endif %}
+
+    {% for task in tasks %}
+        <div class="{{ task.later }}" data-id={{ task.id }} xmlns:background-position="http://www.w3.org/1999/xhtml">
+            <header>
+                <div class="priority " data-prior={{ task.priority }}></div>
+                <span date-datime="0">{{ task.date_time }}</span>
+                <div class="icon" data-num={{ task.project.img }} style="min-width: 25px; max-width: 25px; background-size: 150px 75px; background-position: -50px 0px;"></div>
+                <span class="projectName" data-proj={{ task.project.id }}> {{ task.project.name }}</span>
+                <div class="check rss" data-status={{ task.status }}>
+                     <label for="buttonThree">
+                        <i></i>
+                    </label>
+                </div>
+
+                {% if arch %}
+                <div class="menu"><span class="menu_edit">Изменить</span><span class="menu_del">Удалить</span><span class="menu_esc">Отмена</span></div>
+                {% endif %}
+
+            </header>
+            <span class="taskName">{{ task.name }}</span>
+        </div>
+        {% empty %}
+            <p style="color:#6121bc" align="center">Задачи отсутствуют</p>
+    {% endfor %}
+
+    <div id="update_filter" data-seven="{{ filt.seven }}" data-today="{{ filt.today }}" data-all="{{ filt.all }}"></div>

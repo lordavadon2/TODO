@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="uk"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>{% block title %}{% endblock %}</title>
+            <meta http-equiv="Cache-Control" content="private">
+            <meta http-equiv="Pragma" content="no-cache">
+            <meta http-equiv="Cache-Control" content="no-cache">
+            <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
+    <link href="{% static 'css/jquery-ui.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/preloader.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/timepicker-ui.css' %}">
+    <link href="{% static 'css/base.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/check.css' %}" rel="stylesheet" type="text/css">
+        
+    <link href="{% static 'css/todo.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/tasks.css' %}" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/landscape.css' %}" media="screen and (orientation: landscape), projection">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/portrait.css' %}" media="screen and (orientation: portrait), projection">
+
+
+</head>
+
+<body style="min-width: inherit; min-height: inherit;">
+
+    <header>
+        <p><a href="{% url 'todo:main_str' %}">TODO</a><label id="long"><span></span><span></span><span></span></label></p>
+        <span id="archive" class="sing"><a href="{% url 'todo:archive' %}">Архив</a></span>
+        <span id="logout" class="sing"><a href="{% url 'todo:log_out' %}">Выход</a></span>
+    </header>
+
+{% block content %}{% endblock %}
+
+   </body>
+
+    <script src="{% static 'script/jquery_1_9_2.js' %}"></script>
+    <script src="{% static 'script/timepicker-ui.js' %}"></script>
+    <script src="{% static 'script/jquery-ui.min.js' %}"></script>
+    <script src="{% static 'script/main.js' %}"></script><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="position: absolute; top: 158.688px; left: 505.266px; z-index: 1; display: none;"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="Prev"><span class="ui-icon ui-icon-circle-triangle-w">Prev</span></a><a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Next"><span class="ui-icon ui-icon-circle-triangle-e">Next</span></a><div class="ui-datepicker-title"><span class="ui-datepicker-month">Апрель</span>&nbsp;<span class="ui-datepicker-year">2018</span></div></div><table class="ui-datepicker-calendar"><thead><tr><th scope="col" class="ui-datepicker-week-end"><span title="Воскресенье">Вс</span></th><th scope="col"><span title="Понедельник">Пн</span></th><th scope="col"><span title="Вторник">Вт</span></th><th scope="col"><span title="Среда">Ср</span></th><th scope="col"><span title="Четверг">Чт</span></th><th scope="col"><span title="Пятница">Пт</span></th><th scope="col" class="ui-datepicker-week-end"><span title="Суббота">Сб</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2018"><a class="ui-state-default" href="http://127.0.0.1:8000/#">1</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2018"><a class="ui-state-default" href="http://127.0.0.1:8000/#">2</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2018"><a class="ui-state-default" href="http://127.0.0.1:8000/#">3</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2018"><a class="ui-state-default" href="http://127.0.0.1:8000/#">4</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2018"><a class="ui-state-default" href="http://127.0.0.1:8000/#">5</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2018"><a class="ui-state-default" href="http://127.0.0.1:8000/#">6</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2018"><a class="ui-state-default" href="http://127.0.0.1:8000/#">7</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2018"><a class="ui-state-default" href="http://127.0.0.1:8000/#">8</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2018"><a class="ui-state-default" href="http://127.0.0.1:8000/#">9</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2018"><a class="ui-state-default" href="http://127.0.0.1:8000/#">10</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2018"><a class="ui-state-default" href="http://127.0.0.1:8000/#">11</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2018"><a class="ui-state-default" href="http://127.0.0.1:8000/#">12</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2018"><a class="ui-state-default" href="http://127.0.0.1:8000/#">13</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2018"><a class="ui-state-default" href="http://127.0.0.1:8000/#">14</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2018"><a class="ui-state-default" href="http://127.0.0.1:8000/#">15</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2018"><a class="ui-state-default" href="http://127.0.0.1:8000/#">16</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2018"><a class="ui-state-default" href="http://127.0.0.1:8000/#">17</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2018"><a class="ui-state-default" href="http://127.0.0.1:8000/#">18</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2018"><a class="ui-state-default" href="http://127.0.0.1:8000/#">19</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2018"><a class="ui-state-default" href="http://127.0.0.1:8000/#">20</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2018"><a class="ui-state-default" href="http://127.0.0.1:8000/#">21</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2018"><a class="ui-state-default" href="http://127.0.0.1:8000/#">22</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2018"><a class="ui-state-default" href="http://127.0.0.1:8000/#">23</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2018"><a class="ui-state-default" href="http://127.0.0.1:8000/#">24</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2018"><a class="ui-state-default" href="http://127.0.0.1:8000/#">25</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2018"><a class="ui-state-default" href="http://127.0.0.1:8000/#">26</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2018"><a class="ui-state-default" href="http://127.0.0.1:8000/#">27</a></td><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2018"><a class="ui-state-default" href="http://127.0.0.1:8000/#">28</a></td></tr><tr><td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2018"><a class="ui-state-default" href="http://127.0.0.1:8000/#">29</a></td><td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2018"><a class="ui-state-default" href="http://127.0.0.1:8000/#">30</a></td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td></tr></tbody></table></div><div class="time-picker time-picker-body advanced" style="left: 505.266px; top: 449.688px; display: none;"><div class="switch-wrapper"><div class="switch-image pm_time">PM</div></div><div class="time-picker-arrow time-picker-hour" style="transform: rotate(47deg);"></div><div class="time-picker-arrow time-picker-minute" style="transform: rotate(210deg);"></div><div class="switch-wrapper"><div class="switch-button"></div></div></div>
+
+    <script src="{% static 'script/load_content.js' %}"></script>
+    <script src="{% static 'script/slide.js' %}"></script>
+
+    <script src="{% static 'script/edit_add.js' %}"></script>
+    <script src="{% static 'script/adaptive.js' %}"></script>
+    
+</html>

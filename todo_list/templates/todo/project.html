@@ -1,0 +1,17 @@
+{% load static %}
+
+{% for project in projects %}
+    <div class="project" data-id={{ project.id }}>
+    <div><div class="icon" data-num={{ project.img }} style="min-width: 30px; max-width: 30px; background-size: 180px 90px; background-position: -60px 0px;"></div>
+    <span class="name">{{ project.name }}</span><span class="coun">{{ project.count }}</span></div>
+
+    {% if arch %}
+    <div class="menu" style="height: 33px;"><span class="menu_edit">Изменить</span><span class="menu_del">Удалить</span><span class="menu_esc">Отмена</span></div>
+    {% endif %}
+
+    </div>
+    {% empty %}
+        <br>
+        <p style="color:#002baa">Для начала хотя бы один проект должен быть</p>
+{% endfor %}
+

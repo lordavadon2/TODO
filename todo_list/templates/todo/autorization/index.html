@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8">
+	<title>LogIn</title>
+	<link rel='StyleSheet' href='{% static 'css/login.css' %}' type='text/css'>
+	<link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="login_container">
+	<div id="form_container">
+		<p class="login-text">Авторизация на сайте</p>
+        {% if ctx.flag %}<p class="error-text">{{ ctx.text }}</p>{% endif %}
+		<form method='POST' action="{% url 'todo:log_in' %}">
+            {% csrf_token %}
+		<input type='text' onFocus="if(this.value=='Логин')this.value=''" onblur="if(this.value=='')this.value='Логин'" name='username' value='Логин' class='text_input' />
+		<input type='password' onFocus="if(this.value=='Пароль')this.value=''" onblur="if(this.value=='')this.value='Пароль'" name='password' value='Пароль' class='text_input' />
+		<input type='submit' value='' id='login'/>
+		</form>
+    <div id="form_container">
+		<p class="login-text" align="top">Войти с помощью:</p>
+        <p align="center">
+            <a href="{% url 'social:begin' 'google-oauth2' %}" ><img src="../../../static/img/log/google_plus.png" width="50" height="50"></a>
+            <a href="{% url 'social:begin' 'github' %}" ><img src="../../../static/img/log/github.png" width="50" height="50">
+        </p>
+	</div>
+	</div>
+</div>
+</body>
+</html>

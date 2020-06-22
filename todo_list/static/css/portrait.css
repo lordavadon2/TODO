@@ -1,0 +1,119 @@
+#long{
+    display:block;
+}
+#left{
+    position: absolute;
+    left:-150%;
+    top:0%;
+    width:30%;
+    padding:10% 5% 0 50%;
+    box-shadow:55px 30px 50px rgba(0,0,0,0.5);
+    background-color:#EFEFEF;
+    z-index:11;
+    transition: all 0.8s ease;
+}
+
+#centr{
+    background-color:#EFEFEF;
+}
+#wrap{
+    justify-content: center;
+}
+.project > div:first-child{
+    margin-right:5%;
+
+}
+#error_box{
+        font-size:25px;
+        left:15%;
+        top:15%;
+        width:80%;
+    }
+
+
+@media  (max-aspect-ratio: 999/1000) { /*0.999*/
+    #centr{
+        width: 80%;
+        font-size:20px;
+    }
+    #left{
+        width:40%;
+        padding-right:7%;
+        font-size:20px;
+    }
+    #left.active{
+        left:-25%;
+    }
+    .check{
+            width:5%;
+    }
+    body > header p{
+        width:25%;
+    }
+    #archive{
+            margin-right: -30%;
+    }
+    .tasks .icon,.project>div .icon,#add_project .icon{
+        height:45px;
+    }
+    .project .menu{
+        right:-15%;
+    }
+    body > header{
+            padding:1% 0;
+    }
+}
+@media  (max-aspect-ratio: 8/10) {
+     #centr,#left{
+        font-size:25px;
+    }
+    #left{
+        margin-top:7%;
+    }
+    body > header{
+            padding:3% 0;
+    }
+
+}
+@media  (max-aspect-ratio: 6/10) {
+    #centr,#left{
+        font-size:30px;
+    }
+    body{
+        font-size:20px;
+    }
+    #left{
+        margin-top:10%;
+        width:60%;
+        padding-left:10%;
+    }
+    #left.active{
+        margin-left:33%;
+    }
+
+    .project .menu{
+        right:-10%;
+      background-size: 15px 70px;
+    }
+    .tasks .icon,.project>div .icon,#add_project .icon{
+        height:55px;
+    }
+
+
+    #long  span{
+            height:13%;
+    }
+}
+@media  (max-aspect-ratio: 4/10) {
+    #left{
+        margin-top:15%;
+
+    }
+
+    #long  span{
+            height:10%;
+    }
+    body > header{
+            padding:5% 0;
+    }
+}

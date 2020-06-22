@@ -1,0 +1,76 @@
+
+@media  (min-aspect-ratio: 1001/1000) { /*1.1*/
+       .panel{
+            margin-left: 10%;
+            width:22%;
+       }
+       #archive{
+            margin-right: -60%;
+       }
+        .projectName{
+            width: 47%;
+        }
+        #wrap section{
+            width: 70%;
+        }
+        .check label i {
+            right:65%;
+        }
+        #centr{
+                width: 50%;
+
+        }
+        body > header{
+            padding:1% 0;
+        }
+   }
+   @media  (min-aspect-ratio: 11/10) { /*1.1*/
+       .panel{
+            margin-left: 10%;
+       }
+       #archive{
+            margin-right: -60%;
+       }
+        .projectName{
+            width: 47%;
+        }
+        #wrap section{
+            width: 70%;
+        }
+        .check label i {
+            right:65%;
+        }
+                body > header{
+            padding:1% 0;
+        }
+   }
+
+   @media  (min-aspect-ratio: 17/10) { /*1.5*/
+       #archive{
+            margin-right: -60%;
+       }
+       .check{
+            width:5%;
+       }
+       .check label i {
+            right:80%;
+        }
+       .projectName{
+            width: 55%;
+       }
+       #left{
+            width:20%;
+            margin-left: 8%;
+        }
+       body > header{
+            padding:0.5% 0;
+       }
+   }
+
+   @media  (min-aspect-ratio: 2/1) {
+
+          body > header{
+            padding:00;
+       }
+
+   }

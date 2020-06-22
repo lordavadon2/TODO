@@ -1,0 +1,69 @@
+{% extends 'todo/base.html' %}
+{% load static %}
+
+{% block title %}ToDo{% endblock %}
+
+{% block content %}
+
+ <div id="wrap">
+    <div id="left" class="panel">
+        <header data-day="1">
+            <p> </p>
+
+            <p class="filter" data-day="1">Сегодня <span></span></p>
+            <p class="filter" data-day="7">7 дней <span></span></p>
+            <p class="filter active" data-day="0">Все <span></span></p>
+
+        </header>
+        <p>Проекты:</p>
+        <div></div>
+
+            <div class="add">
+                <div>
+                     <img src="{% static 'img/add.gif' %}">  <p>Добавить проект</p>
+                </div>
+            </div>
+
+    </div>
+
+    <div id="centr">
+        <div></div>
+
+            <div class="add">
+                <div style="display: flex;">
+                    <img src="{% static 'img/add.gif' %}"> <p>Добавить задание</p>
+                </div>
+            </div>
+
+    </div>
+
+</div>
+            <div id="preloader" style="display: none;">
+            <div class="cssload-tetrominos">
+                    <div class="cssload-tetromino cssload-box1"></div>
+                    <div class="cssload-tetromino cssload-box2"></div>
+                    <div class="cssload-tetromino cssload-box3"></div>
+                    <div class="cssload-tetromino cssload-box4"></div>
+            </div>
+                </div>
+
+    <div id="error_box" style="color: black; background: rgba(132, 182, 222, 0.95); position: fixed; z-index: 100; width: 60%; left: 15%; top: 20%; box-shadow: rgba(0, 0, 0, 0.7) 3px 5px 15px 3px; border-radius: 5px; text-align: center; padding: 5%; display: none;">
+        <p id="error_message" style="color: #FFF;font-size: 200%; margin-top: 18px; font-weight: bold;  text-shadow: 1px 1px 1px #000; filter: dropshadow(color=#FFFFFF, offx=1, offy=1);">Задание успешно добавленно</p>
+    </div>
+
+<div id="add_task" style="display: none;">
+
+                    <label>Приоритет: <label><input type="radio" name="priority" value="a"> Высокий </label><label><input name="priority" type="radio" value="b"> Средний </label><label><input name="priority" type="radio" value="c"> Низкий</label></label><br>
+                    <label>Проект: <select></select></label>
+                    <textarea id="add_name" placeholder="Описание задания"></textarea><br>
+                    <input id="add_datetime" placeholder="Время до выполнения"><br>
+                     <span class="esc">Отмена</span><span class="end"> Готово</span>
+                </div><div id="add_project">
+             <div>
+                 <div class="icon" data-num="2" style="min-width: 30px; max-width: 30px; background-size: 180px 90px; background-position: -60px 0px;"><div id="icon_panel" style="display: none;"><div class="shadow"></div><div class="shadow"></div><div class="shadow"></div><div class="shadow"></div><div class="shadow"></div><div class="shadow"></div><div class="shadow"></div><div class="shadow"></div><div class="shadow"></div><div class="shadow"></div><div class="shadow"></div><div class="shadow"></div><div class="shadow"></div><div class="shadow"></div><div class="shadow"></div><div class="shadow"></div><div class="shadow"></div><div class="shadow"></div></div></div>
+                 <textarea rows="3" id="add_name_pr" placeholder="Название проекта"></textarea><br>
+             </div>
+            <span class="end"> Готово</span> <span class="esc">Отмена</span>
+         </div>
+
+{% endblock %}
